@@ -28,9 +28,10 @@ public class AgentController : Agent
     {
         float moveX = actions.ContinuousActions[0];
         float moveZ = actions.ContinuousActions[1];
-        moveSpeed=4f;
+       
 
-        Vector3 velocity=new Vector3(moveX,0f,moveZ) * Time.deltaTime*moveSpeed;
+        Vector3 velocity=new Vector3(moveX,0f,moveZ) ;
+        velocity = velocity.normalized * Time.deltaTime * moveSpeed;
 
         transform.localPosition +=velocity;
     }

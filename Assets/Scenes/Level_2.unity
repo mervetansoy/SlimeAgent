@@ -15679,6 +15679,22 @@ PrefabInstance:
       propertyPath: hedef
       value: 
       objectReference: {fileID: 422069251}
+    - target: {fileID: 2531391617510314251, guid: 7416d8fd953f3184ca7d87e5eb398004, type: 3}
+      propertyPath: moveSpeed
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214665395917302888, guid: 7416d8fd953f3184ca7d87e5eb398004, type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214665395917302888, guid: 7416d8fd953f3184ca7d87e5eb398004, type: 3}
+      propertyPath: m_BehaviorType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3214665395917302888, guid: 7416d8fd953f3184ca7d87e5eb398004, type: 3}
+      propertyPath: m_BrainParameters.m_ActionSpec.m_NumContinuousActions
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4905062014747880773, guid: 7416d8fd953f3184ca7d87e5eb398004, type: 3}
       propertyPath: m_LocalPosition.x
       value: -17
