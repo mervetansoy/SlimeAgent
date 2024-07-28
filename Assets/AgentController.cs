@@ -9,20 +9,13 @@ public class AgentController : Agent
 {
    
    [SerializeField] private Transform hedef;
+   [SerializeField] private float moveSpeed =4f;
 
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = new Vector3(-17f,0.24999997f,-32f);
-
-        int randm=Random.Range(0,2);
-        if(randm==0)
-        {
-            hedef.localPosition=new Vector3(-14f,0.5f,-32f);
-        }
-        if( randm ==1)
-        {
-            hedef.localPosition=new Vector3(-19.5f,0.5f,-32f);
-        }
+        transform.localPosition = new Vector3(Random.Range(-20f,-12f), 0.25f, Random.Range(-27f,-35f));
+        hedef.localPosition=new Vector3(Random.Range(-20f,-12f), 0.25f, Random.Range(-27f,-35f));
+        
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -33,16 +26,20 @@ public class AgentController : Agent
 
     public override void OnActionReceived(ActionBuffers actions)
     {
-        float move = actions.ContinuousActions[0];
-        float moveSpeed=2f;
+        float moveX = actions.ContinuousActions[0];
+        float moveZ = actions.ContinuousActions[1];
+        moveSpeed=4f;
 
-        transform.localPosition +=new Vector3(move,0f) * Time.deltaTime*moveSpeed;
+        Vector3 velocity=new Vector3(moveX,0f,moveZ) * Time.deltaTime*moveSpeed;
+
+        transform.localPosition +=velocity;
     }
 
     public override void Heuristic(in ActionBuffers actionsOut)
     {
         ActionSegment<float> continuousAction=actionsOut.ContinuousActions;
         continuousAction[0]=Input.GetAxisRaw("Horizontal");
+        continuousAction[1]=Input.GetAxisRaw("Vertical");
     }
 
     private void OnTriggerEnter(Collider nesne)
