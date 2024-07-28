@@ -49,12 +49,12 @@ public class AgentController : Agent
  { 
     if(nesne.gameObject.tag =="Potion")
     {
-        AddReward(10f);
+        AddReward(2f);
         EndEpisode();
     }
     if (nesne.gameObject.tag == "Wall")
     {
-        AddReward(-5f);
+        AddReward(-1f);
         EndEpisode();
     }
  }    

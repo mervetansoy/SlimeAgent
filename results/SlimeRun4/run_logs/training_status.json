@@ -1,0 +1,29 @@
+{
+    "Slime Agent": {
+        "checkpoints": [
+            {
+                "steps": 2737,
+                "file_path": "results\\SlimeRun4\\Slime Agent\\Slime Agent-2737.onnx",
+                "reward": 0.0,
+                "creation_time": 1722194379.2638795,
+                "auxillary_file_paths": [
+                    "results\\SlimeRun4\\Slime Agent\\Slime Agent-2737.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2737,
+            "file_path": "results\\SlimeRun4\\Slime Agent.onnx",
+            "reward": 0.0,
+            "creation_time": 1722194379.2638795,
+            "auxillary_file_paths": [
+                "results\\SlimeRun4\\Slime Agent\\Slime Agent-2737.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.0.0",
+        "torch_version": "2.3.1+cpu"
+    }
+}
