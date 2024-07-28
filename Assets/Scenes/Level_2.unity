@@ -13675,8 +13675,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4289104263280598082, guid: a4ec793513574cd49719c4055b630e2b, type: 3}
+      propertyPath: m_Model
+      value: 
+      objectReference: {fileID: 5022602860645237092, guid: b736ae3f27dbeab4f982ed7e5cabda41, type: 3}
+    - target: {fileID: 4289104263280598082, guid: a4ec793513574cd49719c4055b630e2b, type: 3}
       propertyPath: m_BehaviorType
-      value: 0
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4289104263280598082, guid: a4ec793513574cd49719c4055b630e2b, type: 3}
+      propertyPath: m_BrainParameters.VectorObservationSize
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5455956580797038215, guid: a4ec793513574cd49719c4055b630e2b, type: 3}
       propertyPath: hedef

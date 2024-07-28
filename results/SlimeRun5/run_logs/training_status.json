@@ -9,15 +9,24 @@
                 "auxillary_file_paths": [
                     "results\\SlimeRun5\\Slime Agent\\Slime Agent-53959.pt"
                 ]
+            },
+            {
+                "steps": 151655,
+                "file_path": "results\\SlimeRun5\\Slime Agent\\Slime Agent-151655.onnx",
+                "reward": null,
+                "creation_time": 1722196297.042162,
+                "auxillary_file_paths": [
+                    "results\\SlimeRun5\\Slime Agent\\Slime Agent-151655.pt"
+                ]
             }
         ],
         "final_checkpoint": {
-            "steps": 53959,
+            "steps": 151655,
             "file_path": "results\\SlimeRun5\\Slime Agent.onnx",
-            "reward": -5.0,
-            "creation_time": 1722194873.6752896,
+            "reward": null,
+            "creation_time": 1722196297.042162,
             "auxillary_file_paths": [
-                "results\\SlimeRun5\\Slime Agent\\Slime Agent-53959.pt"
+                "results\\SlimeRun5\\Slime Agent\\Slime Agent-151655.pt"
             ]
         }
     },
