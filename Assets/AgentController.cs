@@ -95,7 +95,7 @@ public class AgentController : Agent
     {
         spawnedPotionList.Remove(nesne.gameObject);
         Destroy(nesne.gameObject);
-        AddReward(10f);
+        AddReward(5f);
         if(spawnedPotionList.Count==0)
         {
             RemovePotion(spawnedPotionList);
@@ -107,7 +107,7 @@ public class AgentController : Agent
     if (nesne.gameObject.tag == "Wall")
     {
         
-        AddReward(-10f);
+        AddReward(-5f);
         EndEpisode();
     }
  }    

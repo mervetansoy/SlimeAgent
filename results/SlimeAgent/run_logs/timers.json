@@ -1,0 +1,54 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1722278685",
+        "python_version": "3.10.12 | packaged by Anaconda, Inc. | (main, Jul  5 2023, 19:01:18) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\Merve\\anaconda3\\envs\\mlagents\\Scripts\\mlagents-learn --run-id=SlimeAgent --resume",
+        "mlagents_version": "1.0.0",
+        "mlagents_envs_version": "1.0.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.3.1+cpu",
+        "numpy_version": "1.21.5",
+        "end_time_seconds": "1722278697"
+    },
+    "total": 12.32401470001787,
+    "count": 1,
+    "self": 0.00840220000827685,
+    "children": {
+        "run_training.setup": {
+            "total": 0.039824600011343136,
+            "count": 1,
+            "self": 0.039824600011343136
+        },
+        "TrainerController.start_learning": {
+            "total": 12.27578789999825,
+            "count": 1,
+            "self": 0.00018780003301799297,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 12.1730491000053,
+                    "count": 1,
+                    "self": 12.1730491000053
+                },
+                "trainer_threads": {
+                    "total": 1.2999807950109243e-06,
+                    "count": 1,
+                    "self": 1.2999807950109243e-06
+                },
+                "TrainerController._save_models": {
+                    "total": 0.10254969997913577,
+                    "count": 1,
+                    "self": 0.006995399977313355,
+                    "children": {
+                        "RLTrainer._checkpoint": {
+                            "total": 0.09555430000182241,
+                            "count": 1,
+                            "self": 0.09555430000182241
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

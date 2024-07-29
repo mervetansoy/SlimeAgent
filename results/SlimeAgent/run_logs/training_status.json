@@ -1,0 +1,65 @@
+{
+    "Slime Agent": {
+        "checkpoints": [
+            {
+                "steps": 308558,
+                "file_path": "results\\SlimeAgent\\Slime Agent\\Slime Agent-308558.onnx",
+                "reward": 20.0,
+                "creation_time": 1722276941.2960918,
+                "auxillary_file_paths": [
+                    "results\\SlimeAgent\\Slime Agent\\Slime Agent-308558.pt"
+                ]
+            },
+            {
+                "steps": 407582,
+                "file_path": "results\\SlimeAgent\\Slime Agent\\Slime Agent-407582.onnx",
+                "reward": 14.838709677419354,
+                "creation_time": 1722277692.4238155,
+                "auxillary_file_paths": [
+                    "results\\SlimeAgent\\Slime Agent\\Slime Agent-407582.pt"
+                ]
+            },
+            {
+                "steps": 499951,
+                "file_path": "results\\SlimeAgent\\Slime Agent\\Slime Agent-499951.onnx",
+                "reward": 19.86111111111111,
+                "creation_time": 1722278287.6372008,
+                "auxillary_file_paths": [
+                    "results\\SlimeAgent\\Slime Agent\\Slime Agent-499951.pt"
+                ]
+            },
+            {
+                "steps": 500015,
+                "file_path": "results\\SlimeAgent\\Slime Agent\\Slime Agent-500015.onnx",
+                "reward": 19.86111111111111,
+                "creation_time": 1722278287.690581,
+                "auxillary_file_paths": [
+                    "results\\SlimeAgent\\Slime Agent\\Slime Agent-500015.pt"
+                ]
+            },
+            {
+                "steps": 500015,
+                "file_path": "results\\SlimeAgent\\Slime Agent\\Slime Agent-500015.onnx",
+                "reward": null,
+                "creation_time": 1722278697.4757519,
+                "auxillary_file_paths": [
+                    "results\\SlimeAgent\\Slime Agent\\Slime Agent-500015.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500015,
+            "file_path": "results\\SlimeAgent\\Slime Agent.onnx",
+            "reward": null,
+            "creation_time": 1722278697.4757519,
+            "auxillary_file_paths": [
+                "results\\SlimeAgent\\Slime Agent\\Slime Agent-500015.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "1.0.0",
+        "torch_version": "2.3.1+cpu"
+    }
+}
