@@ -321,6 +321,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3330951418888152816}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4426631547800969375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618271164940701632}
+  - component: {fileID: 4126525606177239171}
+  m_Layer: 0
+  m_Name: Ray
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1618271164940701632
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4426631547800969375}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.581, z: 0.424}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4905062014747880773}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4126525606177239171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4426631547800969375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayPerceptionSensor
+  m_DetectableTags:
+  - Wall
+  - Potion
+  m_RaysPerDirection: 5
+  m_MaxRayDegrees: 100
+  m_SphereCastRadius: 0.5
+  m_RayLength: 20
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  m_ObservationStacks: 1
+  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  m_StartVerticalOffset: 0
+  m_EndVerticalOffset: 0
 --- !u!1 &5043565817391131979
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +417,7 @@ Transform:
   m_Children:
   - {fileID: 1710611890954733851}
   - {fileID: 8293276189537267694}
+  - {fileID: 1618271164940701632}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &4126794448274075449
@@ -420,18 +481,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 6
+    VectorObservationSize: 3
     NumStackedVectorObservations: 1
     m_ActionSpec:
-      m_NumContinuousActions: 1
+      m_NumContinuousActions: 2
       BranchSizes: 01000000
     VectorActionSize: 
     VectorActionDescriptions: []
     VectorActionSpaceType: 0
     hasUpgradedBrainParametersWithActionSpec: 1
-  m_Model: {fileID: 5022602860645237092, guid: b736ae3f27dbeab4f982ed7e5cabda41, type: 3}
+  m_Model: {fileID: 0}
   m_InferenceDevice: 0
-  m_BehaviorType: 2
+  m_BehaviorType: 1
   m_BehaviorName: Slime Agent
   TeamId: 0
   m_UseChildSensors: 1
@@ -453,7 +514,12 @@ MonoBehaviour:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
   MaxStep: 0
-  hedef: {fileID: 0}
+  hedef: {fileID: 5885607346254011382, guid: 7b95d00997c89e841a71cdd7962894a5, type: 3}
+  potionCount: 4
+  food: {fileID: 2431983950763769061, guid: 7b95d00997c89e841a71cdd7962894a5, type: 3}
+  spawnedPotionList: []
+  moveSpeed: 0.5
+  environmentLocation: {fileID: 9070582515780047790, guid: 473519c05c7729942b01de02b7c8adbb, type: 3}
 --- !u!114 &8036024189907421080
 MonoBehaviour:
   m_ObjectHideFlags: 0

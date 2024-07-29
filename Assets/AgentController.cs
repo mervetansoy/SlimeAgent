@@ -4,12 +4,18 @@ using UnityEngine;
 using Unity.MLAgents;
 using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
+using JetBrains.Annotations;
+
 
 public class AgentController : Agent
 {
    
    [SerializeField] private Transform hedef;
+   public int potionCount;
+   public GameObject food;
+   [SerializeField] private List<GameObject> spawnedPotionList = new List<GameObject>();
    [SerializeField] private float moveSpeed =4f;
+   [SerializeField] private Transform environmentLocation;
 
 
    private Rigidbody rb;
@@ -21,9 +27,37 @@ public class AgentController : Agent
 
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = new Vector3(Random.Range(-20f,-12f), 0.25f, Random.Range(-27f,-35f));
-        //hedef.localPosition=new Vector3(Random.Range(-20f,-12f), 0.25f, Random.Range(-27f,-35f));
+        transform.localPosition = new Vector3(Random.Range(-29f,-24f), 0.25f, Random.Range(-20f,-35f));
+        CreatePotion();
         
+        
+    }
+
+    private void CreatePotion()
+    {
+
+        if(spawnedPotionList.Count !=0)
+        {
+            RemovePotion(spawnedPotionList);
+        }
+        for (int i=0;i<potionCount;i++)
+        {
+            GameObject newPotion=Instantiate(food);
+            newPotion.transform.parent=environmentLocation;
+            Vector3 potionLocation =new Vector3(Random.Range(-29f,-24f), 0.25f, Random.Range(-20f,-35f));
+            newPotion.transform.localPosition=potionLocation;
+            spawnedPotionList.Add(newPotion);
+
+        }
+    }
+
+    private void RemovePotion(List<GameObject> DeletedGameObjectList)
+    {
+        foreach (GameObject item in DeletedGameObjectList)
+        {
+            Destroy(item.gameObject);
+        }
+        DeletedGameObjectList.Clear();
     }
 
     public override void CollectObservations(VectorSensor sensor)
@@ -59,12 +93,21 @@ public class AgentController : Agent
  { 
     if(nesne.gameObject.tag =="Potion")
     {
-        AddReward(5f);
-        EndEpisode();
+        spawnedPotionList.Remove(nesne.gameObject);
+        Destroy(nesne.gameObject);
+        AddReward(10f);
+        if(spawnedPotionList.Count==0)
+        {
+            RemovePotion(spawnedPotionList);
+            AddReward(5f);
+            EndEpisode();
+        }
+        
     }
     if (nesne.gameObject.tag == "Wall")
     {
-        AddReward(-1f);
+        
+        AddReward(-15f);
         EndEpisode();
     }
  }    
