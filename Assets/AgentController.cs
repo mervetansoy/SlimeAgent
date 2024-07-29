@@ -27,7 +27,7 @@ public class AgentController : Agent
 
     public override void OnEpisodeBegin()
     {
-        transform.localPosition = new Vector3(Random.Range(-29f,-24f), 0.25f, Random.Range(-20f,-35f));
+        transform.localPosition = new Vector3(Random.Range(-29f,-19f), 0.25f, Random.Range(-35f,-24f));
         CreatePotion();
         
         
@@ -44,7 +44,7 @@ public class AgentController : Agent
         {
             GameObject newPotion=Instantiate(food);
             newPotion.transform.parent=environmentLocation;
-            Vector3 potionLocation =new Vector3(Random.Range(-29f,-24f), 0.25f, Random.Range(-20f,-35f));
+            Vector3 potionLocation =new Vector3(Random.Range(-29f,-19f), 0.25f, Random.Range(-35f,-24f));
             newPotion.transform.localPosition=potionLocation;
             spawnedPotionList.Add(newPotion);
 
@@ -107,7 +107,7 @@ public class AgentController : Agent
     if (nesne.gameObject.tag == "Wall")
     {
         
-        AddReward(-15f);
+        AddReward(-10f);
         EndEpisode();
     }
  }    
