@@ -1,6 +1,7 @@
 # SlimeAgent
 
 Oyun ve Uygulama Akedemisi 2024 Bootcamp için U37 Unity Takımı MoonShade adlı oyunu için eğitilmiştir.
+- ![7](https://github.com/user-attachments/assets/0a1ac204-182d-40db-9a0b-abd80043d4e1)
 
 - Eğitim Videosu: [MLAgent Eğitim Video](https://www.youtube.com/watch?v=fdJQ5SdHZiA&ab_channel=MerveTansoy)
 - Eğitim Sonucu: [MLAgent Eğitim Sonucu Video](https://www.youtube.com/watch?v=Bzq9JRpZFMU&ab_channel=MerveTansoy)
